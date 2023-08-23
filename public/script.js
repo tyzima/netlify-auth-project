@@ -20,7 +20,7 @@ netlifyIdentity.on('logout', () => {
 function logout() {
     console.log('Logout function called');
     netlifyIdentity.logout();
-    window.location.href = "index.html"; // or "/" for the root of your website
+    window.location.href = "login.html"; // or "/" for the root of your website
 }
 
 
