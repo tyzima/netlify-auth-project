@@ -2,10 +2,9 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
@@ -13,51 +12,44 @@ body {
     background: #fff;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
     max-width: 600px;
+    width: 100%;
 }
 
 h2 {
     text-align: center;
     text-transform: uppercase;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
-label {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select {
-    width: 48%; /* This makes it so two fields can be on one line. Adjust as needed */
-    padding: 10px;
-    margin-right: 2%; /* Space between inline fields */
+.form-row {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
 }
 
-input[type="submit"] {
-    display: block;
-    background-color: #333;
+label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+input, button {
+    flex: 2;
+}
+
+button {
+    background-color: #007BFF;
     color: #fff;
-    padding: 10px 15px;
     border: none;
-    border-radius: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    margin-top: 10px;
+    transition: background-color 0.2s;
 }
 
-input[type="submit"]:hover {
-    background-color: #555;
+button:hover {
+    background-color: #0056b3;
 }
+
