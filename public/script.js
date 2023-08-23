@@ -45,3 +45,10 @@ function uploadImage(field) {
     widget.update({ 'field': field });
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date().toISOString().substr(0, 10);
+    document.getElementById('date').value = today;
+});
+
+
