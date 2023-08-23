@@ -1,5 +1,3 @@
-// script.js
-
 // Netlify Identity Logic
 if (document.getElementById('loginButton')) {
     document.getElementById('loginButton').addEventListener('click', function() {
@@ -9,16 +7,24 @@ if (document.getElementById('loginButton')) {
 
 netlifyIdentity.on('login', user => {
     console.log('login', user);
-    window.location.href = "dashboard.html"; 
+    // Check if the current page isn't dashboard.html before redirecting
+    if (window.location.pathname !== '/dashboard.html') {
+        window.location.href = "dashboard.html"; 
+    }
 });
 
 netlifyIdentity.on('logout', () => {
     console.log('Logged out');
-    window.location.href = "login.html"; 
+    // Check if the current page isn't login.html before redirecting
+    if (window.location.pathname !== '/login.html') {
+        window.location.href = "login.html";
+    }
 });
 
-
-
+// Add the logout function
+function logout() {
+    netlifyIdentity.logout();
+}
 
 // Cloudinary Widget Logic
 const widget = cloudinary.createUploadWidget(
@@ -38,3 +44,4 @@ function uploadImage(field) {
     widget.open();
     widget.update({ 'field': field });
 }
+
