@@ -1,22 +1,5 @@
 /* Your previous styles (if any) */
 
-/* Added styles for card */
-[aria-hidden="false"] .card {
-    -webkit-animation: bouncyEntrance 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-    animation: bouncyEntrance 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-@media (min-width: 480px) {
-    .card {
-        background: #fff;
-        -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .07), 0 12px 32px 0 rgba(14, 30, 37, .1);
-        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .07), 0 12px 32px 0 rgba(14, 30, 37, .1);
-        border-radius: 8px;
-        margin-top: 32px;
-    }
-}
 
 .card {
     position: relative;
@@ -25,6 +8,7 @@
     -webkit-transform: translateY(10px) scale(1);
     transform: translateY(10px) scale(1);
     background: #fff;
+    border-radius: 15px;
 }
 
 /* Animation for bouncy entrance */
