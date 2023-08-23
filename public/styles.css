@@ -1,13 +1,8 @@
-/* Your previous styles (if any) */
-
-
+/* Add desired styles. For now, this is an example with your mentioned design */
 .card {
-    position: relative;
-    padding: 32px;
-    opacity: 0;
-    -webkit-transform: translateY(10px) scale(1);
-    transform: translateY(10px) scale(1);
-    background: #fff;
     border-radius: 15px;
+    box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
 }
-
