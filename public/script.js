@@ -30,7 +30,7 @@ function logout() {
 const widget = cloudinary.createUploadWidget(
     {
         cloudName: 'laxdotcom',
-        uploadPreset: 'prevectorlogos'
+        uploadPreset: 'prevectorlogo'
     },
     (error, result) => {
         if (!error && result && result.event === "success") {
