@@ -17,11 +17,6 @@ netlifyIdentity.on('logout', () => {
     window.location.href = "login.html"; 
 });
 
-function logout() {
-    console.log('Logout function called');
-    netlifyIdentity.logout();
-    window.location.href = "index.html"; // or "/" for the root of your website
-}
 
 
 // Cloudinary Widget Logic
