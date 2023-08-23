@@ -1,27 +1,20 @@
-// Listener for button click to open the Netlify Identity login modal
-document.getElementById('loginButton').addEventListener('click', function() {
-    netlifyIdentity.open('login');
-});
+if (document.getElementById('loginButton')) {
+    document.getElementById('loginButton').addEventListener('click', function() {
+        netlifyIdentity.open('login');
+    });
+}
 
-// Listener for login event
 netlifyIdentity.on('login', user => {
     console.log('login', user);
     window.location.href = "dashboard.html"; // Redirect to dashboard after login
 });
 
-// Listener for logout event
 netlifyIdentity.on('logout', () => {
     console.log('Logged out');
     window.location.href = "login.html"; // Redirect back to login after logout
 });
 
-
-
-// Function to initiate logout
 function logout() {
+    console.log('Logout function called');
     netlifyIdentity.logout();
 }
-
-// Attach the function to the window object to ensure it's accessible globally
-window.logout = logout;
-
