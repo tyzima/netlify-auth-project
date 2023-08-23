@@ -12,7 +12,7 @@ body {
 }
 
 
-.floating-logout {
+.logout-button {
     position: fixed;      /* Fixed position */
     top: 30px;            /* 30px from the top */
     right: 30px;          /* 30px from the right side */
@@ -28,7 +28,7 @@ body {
     text-transform: uppercase; /* Uppercase text */
 }
 
-.floating-logout:hover {
+.logout-button:hover {
     background-color: #d32f2f; /* Darken the background on hover */
 }
 
