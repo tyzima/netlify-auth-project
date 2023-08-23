@@ -40,7 +40,7 @@ body {
 }
 
 .card-header {
-    background-color: #ffffff;
+    background-color: transparent;
     font-size: 20 px;
     font-weight: 800;
     text-transform: uppercase;
