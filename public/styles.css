@@ -24,11 +24,11 @@ h2 {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #303b40;
     color: #ffffff;
     padding: 10px 20px;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s ease;
