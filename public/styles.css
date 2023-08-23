@@ -1,8 +1,40 @@
-/* Add desired styles. For now, this is an example with your mentioned design */
+/* Your previous styles (if any) */
+
+/* Added styles for card */
+[aria-hidden="false"] .card {
+    -webkit-animation: bouncyEntrance 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    animation: bouncyEntrance 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@media (min-width: 480px) {
+    .card {
+        background: #fff;
+        -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .07), 0 12px 32px 0 rgba(14, 30, 37, .1);
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .07), 0 12px 32px 0 rgba(14, 30, 37, .1);
+        border-radius: 8px;
+        margin-top: 32px;
+    }
+}
+
 .card {
-    border-radius: 15px;
-    box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
+    position: relative;
+    padding: 32px;
+    opacity: 0;
+    -webkit-transform: translateY(10px) scale(1);
+    transform: translateY(10px) scale(1);
+    background: #fff;
+}
+
+/* Animation for bouncy entrance */
+@keyframes bouncyEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(1.05);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
