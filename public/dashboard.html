@@ -7,60 +7,119 @@
     <title>Dashboard</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+   <title>Dashboard</title>
+
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Cloudinary Widget Styles -->
+    <link href="https://widget.cloudinary.com/global/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="card">
-        <h2>Welcome to the Dashboard</h2>
-        <button id="logoutButton" class="btn btn-secondary float-right">Logout</button>
+        <h2>Product Entry</h2>
+        <form id="productForm">
+            <div class="form-row">
+                <label>SalesRep:</label>
+                <input type="text" name="salesRep">
 
-        <!-- Start of the form -->
-        <form>
-            <div class="form-group">
-                <label for="ale">Ale</label>
-                <input type="text" class="form-control" id="ale">
-            </div>
-            
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" class="form-control" id="date">
+                <label>Date:</label>
+                <input type="date" name="date">
             </div>
 
-            <!-- ... Continue with other form fields in a similar pattern ... -->
+            <div class="form-row">
+                <label>Does this item exist on Lax.com?</label>
+                <select name="itemExistence">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
 
-            <div class="form-group">
-                <label for="notes">Notes</label>
-                <textarea class="form-control" id="notes"></textarea>
+                <label>Gender:</label>
+                <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Youth">Youth</option>
+                    <option value="Toddler">Toddler</option>
+                </select>
             </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="form-row">
+                <label>Is this a sku modification?</label>
+                <select name="skuModification">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label>Accessories:</label>
+                <input type="text" name="accessories">
+            </div>
+
+            <div class="form-row">
+                <label>Vendor:</label>
+                <input type="text" name="vendor">
+
+                <label>Brand:</label>
+                <input type="text" name="brand">
+            </div>
+
+            <div class="form-row">
+                <label>Vendor Item Code/Sku:</label>
+                <input type="text" name="vendorItemCode">
+
+                <label>Vendor Item Name:</label>
+                <input type="text" name="vendorItemName">
+            </div>
+
+            <div class="form-row">
+                <label>Sizes:</label>
+                <input type="text" name="sizes" placeholder="XS-XL">
+
+                <label>Colors:</label>
+                <input type="text" name="colors" placeholder="White-100">
+            </div>
+
+            <div class="form-row">
+                <label>Wholesale Price:</label>
+                <input type="text" name="wholesalePrice">
+
+                <label>Retail Price:</label>
+                <input type="text" name="retailPrice">
+            </div>
+
+            <div class="form-row">
+                <label>Netsuite/Salesforce Item Code:</label>
+                <input type="text" name="netsuiteItemCode">
+
+                <label>1:</label>
+                <input type="text" name="oneField">
+            </div>
+
+            <div class="form-row">
+                <label>Notes:</label>
+                <textarea name="notes"></textarea>
+            </div>
+
+            <div class="form-row">
+                <label>Front View:</label>
+                <button type="button" onclick="uploadImage('frontView')">Upload Front View</button>
+                <input type="hidden" id="frontView" name="frontView">
+            </div>
+
+            <div class="form-row">
+                <label>Back View:</label>
+                <button type="button" onclick="uploadImage('backView')">Upload Back View</button>
+                <input type="hidden" id="backView" name="backView">
+            </div>
+
+            <button type="submit">Submit</button>
         </form>
-        <!-- End of the form -->
-
     </div>
 
-    <!-- Include Bootstrap JS and its dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-
-    <script>
-    if (window.netlifyIdentity) {
-        const logoutButton = document.getElementById("logoutButton");
-        logoutButton.addEventListener("click", (e) => {
-            e.preventDefault();
-            window.netlifyIdentity.logout();
-        });
-
-        window.netlifyIdentity.on("logout", () => {
-            window.location.href = "login.html";
-        });
-    }
-</script>
-
-    
+    <!-- Cloudinary Widget Script -->
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="dashboard-script.js"></script>
 </body>
 
 </html>
