@@ -1,8 +1,50 @@
-/* Add desired styles. For now, this is an example with your mentioned design */
+/* Poppins Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card styling */
 .card {
+    background-color: #ffffff;
+    padding: 20px 40px;
     border-radius: 15px;
-    box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #5dade2;
+}
+
+.logout-container {
+    position: relative;
+    padding: 20px;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
