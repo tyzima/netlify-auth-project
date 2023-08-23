@@ -1,0 +1,8 @@
+/* Add desired styles. For now, this is an example with your mentioned design */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
