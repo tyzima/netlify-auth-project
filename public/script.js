@@ -19,6 +19,7 @@ netlifyIdentity.on('logout', () => {
 
 
 
+
 // Cloudinary Widget Logic
 const widget = cloudinary.createUploadWidget(
     {
