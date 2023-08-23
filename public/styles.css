@@ -12,7 +12,7 @@ body {
 }
 
 
-.logout-button {
+.btn btn-danger mb-4 {
     position: fixed;      /* Fixed position */
     top: 30px;            /* 30px from the top */
     right: 30px;          /* 30px from the right side */
