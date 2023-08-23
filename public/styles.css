@@ -3,16 +3,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
     background-color: #f4f4f4;
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
 
 
-.btn btn-danger mb-4 {
+.btn btn-danger .mb-4 {
     position: fixed;      /* Fixed position */
     top: 30px;            /* 30px from the top */
     right: 30px;          /* 30px from the right side */
