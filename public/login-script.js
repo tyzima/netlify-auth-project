@@ -14,3 +14,14 @@ netlifyIdentity.on('logout', () => {
     console.log('Logged out');
     window.location.href = "login.html"; // Redirect back to login after logout
 });
+
+
+
+// Function to initiate logout
+function logout() {
+    netlifyIdentity.logout();
+}
+
+// Attach the function to the window object to ensure it's accessible globally
+window.logout = logout;
+
