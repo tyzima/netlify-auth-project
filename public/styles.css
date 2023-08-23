@@ -1,3 +1,6 @@
+
+
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
@@ -7,6 +10,30 @@ body {
     justify-content: center;
     height: 100vh;
 }
+
+
+.floating-logout {
+    position: fixed;      /* Fixed position */
+    top: 30px;            /* 30px from the top */
+    right: 30px;          /* 30px from the right side */
+    border-radius: 15px;  /* Rounded corners */
+    background-color: #f44336; /* Red background */
+    color: white;         /* White text color */
+    border: none;         /* Remove default borders */
+    padding: 12px 24px;   /* Some padding */
+    font-size: 16px;      /* Increase font size */
+    cursor: pointer;      /* Pointer/hand icon on hover */
+    z-index: 1000;        /* Ensure the button is on top of other elements */
+    font-family: 'Poppins', sans-serif; /* Using Poppins font */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.floating-logout:hover {
+    background-color: #d32f2f; /* Darken the background on hover */
+}
+
+
+
 
 .card {
     background: #fff;
