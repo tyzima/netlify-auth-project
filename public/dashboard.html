@@ -368,13 +368,15 @@
     $('#saveNewBrand').on('click', function() {
         let newBrand = $('#newBrandName').val();
         
-        if (newBrand) {
-            // Add the new brand to the dropdown
-            $('#brand').append('<option value="' + newBrand + '">' + newBrand + '</option>');
-            $('#brand').selectpicker('refresh');  // Refresh the selectpicker to show the new option
+       if (newBrand) {
+    // Add the new brand to the dropdown
+    $('#brand').append('<option value="' + newBrand + '">' + newBrand + '</option>');
+    $('#brand').val(newBrand); // Set the new option as the selected value
+    $('#brand').selectpicker('refresh');  // Refresh the selectpicker to show the new option
 
-            $('#addBrandModal').modal('hide');  // Hide the modal
-        }
+    $('#addBrandModal').modal('hide');  // Hide the modal
+}
+
     });
 });
 
