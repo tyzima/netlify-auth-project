@@ -10,6 +10,11 @@ body {
     font-size: 14px;
 }
 
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1400px;
+}
+
+
 /* For all badges, set the text color to white */
 .badge {
     color: white;
