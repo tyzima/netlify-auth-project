@@ -289,18 +289,16 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script> <!-- Add Popper.js here -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js">
+<script src="script.js"></script> <!-- External Script -->
+<script>
+    $(document).ready(function() {
+        $('.selectpicker').selectpicker();
+    });
+</script> <!-- Inline Script -->
 
-    
-$(document).ready(function() {
-    $('.selectpicker').selectpicker();
-});
-    
-</script>
 
 </body>
 </html>
