@@ -26,6 +26,12 @@ function logout() {
     netlifyIdentity.logout();
 }
 
+
+$(document).ready(function() {
+    $('.selectpicker').selectpicker();
+});
+
+
 // Cloudinary Widget Logic
 const widget = cloudinary.createUploadWidget(
     {
