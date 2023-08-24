@@ -19,7 +19,27 @@ exports.handler = async function(event, context) {
         };
     }
 
-    const salesRep = parsedBody.salesRep;
+    const fields = {
+        "SalesRep": parsedBody.salesRep,
+        "Date": parsedBody.date,
+        "ItemExistence": parsedBody.itemExistence,
+        "Gender": parsedBody.gender,
+        "SkuModification": parsedBody.skuModification,
+        "Accessories": parsedBody.accessories,
+        "Vendor": parsedBody.vendor,
+        "Brand": parsedBody.brand,
+        "VendorItemCode": parsedBody.vendorItemCode,
+        "VendorItemName": parsedBody.vendorItemName,
+        "Sizes": parsedBody.sizes,
+        "Colors": parsedBody.colors,
+        "WholesalePrice": parsedBody.wholesalePrice,
+        "RetailPrice": parsedBody.retailPrice,
+        "NetsuiteItemCode": parsedBody.netsuiteItemCode,
+        "OneField": parsedBody.oneField,
+        "Notes": parsedBody.notes,
+        "FrontView": parsedBody.frontView,
+        "BackView": parsedBody.backView
+    };
 
     const config = {
         headers: {
@@ -29,7 +49,7 @@ exports.handler = async function(event, context) {
     };
 
     try {
-        const response = await axios.post(URL, { fields: { "SalesRep": salesRep } }, config); // Only sending the salesRep field
+        const response = await axios.post(URL, { fields: fields }, config);
         return {
             statusCode: 200,
             body: JSON.stringify(response.data)
