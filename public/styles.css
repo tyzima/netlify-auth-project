@@ -10,6 +10,17 @@ body {
     font-size: 14px;
 }
 
+/* For all badges, set the text color to white */
+.selectpicker .badge {
+    color: white;
+}
+
+/* For the white badge, override the text color to black */
+.selectpicker .whitebadge {
+    color: black;
+}
+
+
 .btn-outline-primary.active {
     background-color: #007bff;
     color: #fff;
