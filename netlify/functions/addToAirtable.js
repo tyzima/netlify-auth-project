@@ -8,7 +8,18 @@ exports.handler = async function(event, context) {
     const { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME } = process.env;
     const URL = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`;
 
-    const { data } = JSON.parse(event.body);
+    let parsedBody;
+
+    try {
+        parsedBody = JSON.parse(event.body);
+    } catch (e) {
+        return {
+            statusCode: 400,
+            body: "Invalid JSON body"
+        };
+    }
+
+    const salesRep = parsedBody.salesRep;
 
     const config = {
         headers: {
@@ -18,7 +29,7 @@ exports.handler = async function(event, context) {
     };
 
     try {
-        const response = await axios.post(URL, { fields: data }, config);
+        const response = await axios.post(URL, { fields: { "SalesRep": salesRep } }, config); // Only sending the salesRep field
         return {
             statusCode: 200,
             body: JSON.stringify(response.data)
