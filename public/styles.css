@@ -14,6 +14,16 @@ body {
     color: #fff;
 }
 
+.sizes-tags .btn {
+    margin: 5px;
+}
+
+.btn-outline-secondary.active {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+
 
 .btn btn-danger .mb-4 {
     position: fixed;      /* Fixed position */
