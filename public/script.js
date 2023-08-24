@@ -27,9 +27,6 @@ function logout() {
 }
 
 
-$(document).ready(function() {
-    $('.selectpicker').selectpicker();
-});
 
 
 // Cloudinary Widget Logic
