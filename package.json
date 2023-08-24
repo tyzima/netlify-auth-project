@@ -1,0 +1,8 @@
+{
+  "name": "netlify-project",
+  "version": "1.0.0",
+  "description": "Netlify project with Axios dependency",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
