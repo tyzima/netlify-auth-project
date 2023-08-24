@@ -148,14 +148,33 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="vendor">Vendor:</label>
-            <input type="text" class="form-control" id="vendor" name="vendor">
-        </div>
+    <label for="vendor">Vendor:</label>
+    <select class="form-control selectpicker" id="vendor" name="vendor" data-live-search="true" title="Select a Vendor...">
+        <option>SanMar</option>
+        <option>Nike</option>
+        <option>Fourg</option>
+        <option data-divider="true"></option>
+        <option data-content="<input type='text' placeholder='Other...' onblur='addVendorOption(this.value)'>">Other...</option>
+    </select>
+</div>
+
 
         <div class="form-group col-md-6">
-            <label for="brand">Brand:</label>
-            <input type="text" class="form-control" id="brand" name="brand">
-        </div>
+    <label for="brand">Brand:</label>
+    <select class="form-control selectpicker" id="brand" name="brand" data-live-search="true" title="Select a Brand...">
+        <option>Warrior</option>
+        <option>Nike</option>
+        <option>UnderArmour</option>
+        <option>New Balance</option>
+        <option>Under Armour</option>
+        <option>Jordan</option>
+        <option>ZimaGear</option>
+        <option>LaxDotCom</option>
+        <option data-divider="true"></option>
+        <option data-content="<input type='text' placeholder='Other...' onblur='addBrandOption(this.value)'>">Other...</option>
+    </select>
+</div>
+
     </div>
 
     <div class="form-row">
@@ -172,10 +191,27 @@
 
     <div class="form-row">
       
-                <div class="form-group col-md-6">
-                    <label for="accessories">Accessories:</label>
-                    <input type="text" class="form-control" id="accessories" name="accessories">
-                </div>
+               <div class="form-group col-md-6">
+    <label for="accessories">Category</label>
+    <select class="form-control selectpicker" id="category" name="category" data-live-search="true" title="Select a category...">
+        <option>Mesh Kits</option>
+        <option>Goal Targets</option>
+        <option>Ball Bags</option>
+        <option>Stick Tape</option>
+        <option>Stringing Tools</option>
+        <option>Grip Enhancers</option>
+        <option>End Caps</option>
+        <option>Replacement Nets</option>
+        <option>Goalie Accessories</option>
+        <option>Training Aids</option>
+        <option>Apparel Accessories</option>
+        <option>Helmet Accessories</option>
+        <option>Stick Accessories</option>
+        <option>Protective Accessories</option>
+        <option>Shoe Accessories</option>
+    </select>
+</div>
+
 
        <div class="form-group col-md-6">
     <label for="colors">Colors:</label>
