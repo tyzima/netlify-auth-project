@@ -2,11 +2,12 @@
 
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding-top: 20px;
     background-color: #f4f4f4;
     margin: 0;
     text-align: left;
+    font-size: 10px;
 }
 
 .btn-outline-primary.active {
