@@ -18,6 +18,8 @@ body {
 /* For the white badge, override the text color to black */
 .whitebadge {
     color: black;
+    font-size: 75%;
+    font-weight: 700;
 }
 
 
