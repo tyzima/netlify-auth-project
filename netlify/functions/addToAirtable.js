@@ -58,7 +58,7 @@ console.log(event.body); // Add this line
     } catch (error) {
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: "Failed to add to Airtable" })
+        body: JSON.stringify({ error: error.message }) // This will return the actual error message
         };
     }
 };
