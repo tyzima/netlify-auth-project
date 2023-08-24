@@ -4,7 +4,6 @@ exports.handler = async function(event, context) {
     if (event.httpMethod !== "POST") {
         return { statusCode: 405, body: "Method Not Allowed" };
     }
-console.log(event.body); // Add this line
 
     const { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME } = process.env;
     const URL = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`;
@@ -20,27 +19,7 @@ console.log(event.body); // Add this line
         };
     }
 
-    const fields = {
-        "SalesRep": parsedBody.salesRep,
-        "Date": parsedBody.date,
-        "ItemExistence": parsedBody.itemExistence,
-        "Gender": parsedBody.gender,
-        "SkuModification": parsedBody.skuModification,
-        "Accessories": parsedBody.accessories,
-        "Vendor": parsedBody.vendor,
-        "Brand": parsedBody.brand,
-        "VendorItemCode": parsedBody.vendorItemCode,
-        "VendorItemName": parsedBody.vendorItemName,
-        "Sizes": parsedBody.sizes,
-        "Colors": parsedBody.colors,
-        "WholesalePrice": parsedBody.wholesalePrice,
-        "RetailPrice": parsedBody.retailPrice,
-        "NetsuiteItemCode": parsedBody.netsuiteItemCode,
-        "OneField": parsedBody.oneField,
-        "Notes": parsedBody.notes,
-        "FrontView": parsedBody.frontView,
-        "BackView": parsedBody.backView
-    };
+    const salesRep = parsedBody.salesRep;
 
     const config = {
         headers: {
@@ -50,7 +29,7 @@ console.log(event.body); // Add this line
     };
 
     try {
-        const response = await axios.post(URL, { fields: fields }, config);
+        const response = await axios.post(URL, { fields: { "SalesRep": salesRep } }, config); // Only sending the salesRep field
         return {
             statusCode: 200,
             body: JSON.stringify(response.data)
@@ -58,7 +37,7 @@ console.log(event.body); // Add this line
     } catch (error) {
         return {
             statusCode: 500,
-        body: JSON.stringify({ error: error.message }) // This will return the actual error message
+            body: JSON.stringify({ error: "Failed to add to Airtable" })
         };
     }
 };
