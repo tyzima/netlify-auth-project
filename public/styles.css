@@ -6,6 +6,7 @@ body {
     padding-top: 20px;
     background-color: #f4f4f4;
     margin: 0;
+    text-align: left;
 }
 
 .btn-outline-primary.active {
@@ -41,7 +42,7 @@ body {
     padding: 20px 40px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
 }
 
 .card-header {
@@ -49,6 +50,7 @@ body {
     font-size: 20 px;
     font-weight: 800;
     text-transform: uppercase;
+    text-align: center;
 }
     
 h2 {
