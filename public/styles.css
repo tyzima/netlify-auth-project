@@ -24,6 +24,40 @@ body {
 }
 
 
+.sizes-tags-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows tags to wrap to the next line */
+    gap: 8px; /* Space between tags */
+    margin-bottom: 20px;
+}
+
+.sizes-tags-wrapper .tag-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px; /* Adjusted padding to make tags smaller in height */
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.sizes-tags-wrapper .tag-input {
+    display: none;
+}
+
+.sizes-tags-wrapper .tag-input:checked + .tag-label {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+/* Optional: Add a hover effect for sizes tags */
+.sizes-tags-wrapper .tag-label:hover {
+    background-color: #5dade2;
+    color: #ffffff;
+}
+
+
 
 .btn btn-danger .mb-4 {
     position: fixed;      /* Fixed position */
