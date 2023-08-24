@@ -43,13 +43,17 @@
         <div class="card-header">Product Details</div>
         <div class="card-body">
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="itemExistence">Does this item exist on Lax.com?</label>
-                    <select class="form-control" id="itemExistence" name="itemExistence">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-                </div>
+               <div class="form-group col-md-6">
+    <label>Does this item exist on Lax.com?</label>
+    <div class="btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-primary">
+            <input type="radio" name="itemExistence" id="Yes" value="Yes"> Yes
+        </label>
+        <label class="btn btn-outline-primary">
+            <input type="radio" name="itemExistence" id="No" value="No"> No
+        </label>
+    </div>
+</div>
 
                   <div class="form-group col-md-6">
                     <label>Is this a sku modification?</label>
