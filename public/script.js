@@ -80,6 +80,12 @@ $('#productForm').on('submit', function(event) {
         backView: $('#backView').val()
     };
 
+    console.log(data); // Add this line
+$.post('/.netlify/functions/addToAirtable', { data: data }, function(response) {
+    ...
+});
+
+    
   $.ajax({
     type: "POST",
     url: '/.netlify/functions/addToAirtable',
