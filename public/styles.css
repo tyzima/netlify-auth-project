@@ -7,7 +7,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     text-align: left;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .btn-outline-primary.active {
@@ -96,6 +96,7 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
     
 h2 {
