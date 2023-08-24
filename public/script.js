@@ -80,9 +80,26 @@ $('#productForm').on('submit', function(event) {
         backView: $('#backView').val()
     };
 
-    console.log(data); // Add this line
-$.post('/.netlify/functions/addToAirtable', { data: data }, function(response) {
-    ...
+      console.log("Form data:", data); // To see the form data in the console
+
+    $.ajax({
+        type: "POST",
+        url: '/.netlify/functions/addToAirtable',
+        data: JSON.stringify({ data: data }),
+        contentType: "application/json",
+        success: function(response) {
+            if (response && response.id) {
+                // Data added successfully
+                alert("Data added to Airtable!");
+            } else {
+                alert("Error adding data to Airtable");
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error:", textStatus, errorThrown);
+            alert("An error occurred. Check the console for more details.");
+        }
+    });
 });
 
     
