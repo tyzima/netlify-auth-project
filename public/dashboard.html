@@ -358,7 +358,7 @@
     $('.selectpicker').selectpicker();
 
     // Listen for the 'Add new' option selection in the Brand dropdown
-    $('#brandSelector').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+    $('#brand').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
         if (clickedIndex === (this.length - 1)) { // If "Add new" option is selected
             $('#addBrandModal').modal('show');  // Show the modal
         }
@@ -370,8 +370,8 @@
         
         if (newBrand) {
             // Add the new brand to the dropdown
-            $('#brandSelector').append('<option value="' + newBrand + '">' + newBrand + '</option>');
-            $('#brandSelector').selectpicker('refresh');  // Refresh the selectpicker to show the new option
+            $('#brand').append('<option value="' + newBrand + '">' + newBrand + '</option>');
+            $('#brand').selectpicker('refresh');  // Refresh the selectpicker to show the new option
 
             $('#addBrandModal').modal('hide');  // Hide the modal
         }
